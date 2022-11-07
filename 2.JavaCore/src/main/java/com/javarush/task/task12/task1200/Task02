@@ -1,0 +1,4 @@
+class Skateboard implements CanMove, Rideable
+{
+
+}
