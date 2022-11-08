@@ -1,0 +1,10 @@
+Добавь как можно больше интерфейсов к классу Human, но так, чтобы он не стал абстрактным классом.
+Добавлять методы в класс Human запрещается.
+
+Требования:
+Класс Solution должен содержать интерфейс Worker с методом void workLazy().
+Класс Solution должен содержать интерфейс Businessman с методом void workHard().
+Класс Solution должен содержать интерфейс Secretary с методом void workLazy().
+Класс Solution должен содержать интерфейс Miner с методом void workVeryHard().
+Класс Solution должен содержать класс Human с методами: void workHard() и void workLazy().
+Класс Human должен реализовывать три интерфейса.
