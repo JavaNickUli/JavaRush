@@ -1,4 +1,4 @@
-package com.javarush.task.task12.task1217.task1221;
+package com.javarush.task.task12.task1221;
 
 public class Solution {
 
