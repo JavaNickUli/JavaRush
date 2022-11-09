@@ -1,0 +1,10 @@
+public static void main(String[] args) {
+    MyClass myObject = new MyClass();
+    OutputStream outStream = new FileOutputStream("c:/my-object-data.txt");
+    while (myObject.available() > 0) {
+        int data = myObject.read();
+        outStream.write(data);
+    }
+
+    outStream.close();
+}
