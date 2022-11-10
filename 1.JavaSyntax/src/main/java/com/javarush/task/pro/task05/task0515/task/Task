@@ -1,0 +1,5 @@
+Исправь работу метода main(String[]), который выводит в консоли true, если arrayFirst равняется arraySecond, иначе — false.
+
+Требования:
+Если arrayFirst равняется arraySecond, то метод main(String[]) выводит в консоли true.
+Если arrayFirst не равняется arraySecond, то метод main(String[]) выводит в консоли false.
