@@ -1,0 +1,7 @@
+Реализуй интерфейс Updatable в классе Screen.
+
+Требования:
+Интерфейс Updatable должен наследовать (extends) интерфейс Selectable.
+Класс Screen должен реализовывать (implements) интерфейс Updatable.
+В классе Screen должен быть реализован метод onSelect интерфейса Selectable.
+В классе Screen должен быть реализован метод refresh интерфейса Updatable.
