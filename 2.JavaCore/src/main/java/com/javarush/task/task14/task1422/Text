@@ -1,0 +1,8 @@
+public static void main(String[] args)
+{
+    Object obj = new Tiger();
+    Animal animal = (Animal) obj;
+    Cat cat = (Cat) obj;
+    Tiger tiger = (Tiger) animal;
+    Tiger tiger2 = (Tiger) cat;
+}
