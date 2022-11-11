@@ -7,8 +7,7 @@ public class Solution {
 
     public static void main(String[] args) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        boolean correct = true;
-        do {
+        while (true) {
             switch (reader.readLine()) {
                 case "user":
                     doWork(new Person.User());
@@ -23,9 +22,9 @@ public class Solution {
                     doWork(new Person.Proger());
                     break;
                 default:
-                    correct = false;
+                    return;
             }
-        } while (correct);
+        }
     }
 
     public static void doWork(Person person) {
