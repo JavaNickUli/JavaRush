@@ -1,0 +1,10 @@
+Добавь все возможные интерфейсы из Movable, Sellable, Discountable в класс Clothes.
+Реализуй их методы.
+
+Требования:
+Класс Clothes должен поддерживать интерфейс Movable.
+Класс Clothes должен поддерживать интерфейс Sellable.
+Класс Clothes должен поддерживать интерфейс Discountable.
+В классе Clothes должен быть реализован метод isMovable().
+В классе Clothes должен быть реализован метод getAllowedAction() без параметров.
+В классе Clothes должен быть реализован метод getAllowedAction() с одним параметром типа String.
