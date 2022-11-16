@@ -1,13 +1,15 @@
- package com.javarush.task.task16.task1618;
+package com.javarush.task.task16.task1618;
 
- public class Solution {
+/*
+Снова interrupt
+*/
 
-     public static void main(String[] args) throws InterruptedException {
-         TestThread testThread = new TestThread();
-         testThread.start();
-         testThread.interrupt();
-     }
+public class Solution {
+    public static void main(String[] args) throws InterruptedException {
+        //Add your code here - добавь код тут
+    }
 
-     public static class TestThread extends Thread {
-     }
- }
+    //Add your code below - добавь код ниже
+    public static class TestThread {
+    }
+}
