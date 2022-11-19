@@ -1,16 +1,51 @@
 package sandbox;
 
-public class Ss {
-    public static void main(String[] args) {
-        for (char el : "0123456789".toCharArray()) {
-            int num = el - '0'; //по сути el == (48, 49,..., 57) - 48
-            System.out.print(num); // вывод в консоль: 0123456789
-        }
-        boolean isNum = Character.isDigit('0'); //true
+import java.util.ArrayList;
 
+public class Ss {
+
+    public static void main(String[] args) {
+        ArrayList<String> strings = new ArrayList<>() {{
+            add("роза");
+            add("лира");
+            add("лоза");
+        }};
+        strings = fix2(strings);
+        for (String string : strings) {
+            System.out.println(string);
+        }
     }
 
-    public static boolean isDigit(char ch) {
-        return ch >= 48 && ch <= 57;
+    public static ArrayList<String> fix(ArrayList<String> strings) {
+        int actualSize = strings.size();
+        for (int i = 0; i < actualSize; i++) {
+            String el = strings.get(i);
+            boolean contR = el.contains("р");
+            boolean contL = el.contains("л");
+            if (contR && !contL) {
+                strings.remove(i--);
+                actualSize--;
+            }
+            if (!contR && contL) {
+                strings.add(el);
+            }
+        }
+        return strings;
+    }
+
+    public static ArrayList<String> fix2(ArrayList<String> strings) {
+        ArrayList<String> newArray = new ArrayList<>();
+        for (String el : strings) {
+            boolean contR = el.contains("р");
+            boolean contL = el.contains("л");
+            if (contR && !contL) {
+                continue;
+            }
+            if (!contR && contL) {
+                newArray.add(el);
+            }
+            newArray.add(el);
+        }
+        return newArray;
     }
 }
