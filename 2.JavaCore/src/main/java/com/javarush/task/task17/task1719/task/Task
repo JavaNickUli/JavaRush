@@ -1,0 +1,8 @@
+ApplicationContext будет доступен множеству нитей.
+Сделать так, чтобы данные не терялись: подумай, какое ключевое слово необходимо поставить и где.
+
+Требования:
+Класс ApplicationContext должен быть абстрактным.
+Класс ApplicationContext должен содержать private поле container типа Map<String, GenericsBean>.
+В getByName(String name), если необходимо, используй synchronized.
+В removeByName(String name), если необходимо, используй synchronized.
