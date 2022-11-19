@@ -1,0 +1,17 @@
+Разберись, как работает программа.
+Во время тестирования лог содержит следующее:
+.....
+Добавляем 100, на счету 1100
+Добавляем 100, на счету 1200
+Тратим 1000, на счету 100
+Недостаточно денег
+.....
+Создан баг: деньги не правильно списываются со счета.
+Твоя задача: найти и исправить ошибку.
+
+Требования:
+Класс BankAccount должен содержать private поле balance типа BigDecimal.
+Метод deposit(String money) класса BankAccount должен делегировать поведение в метод deposit(BigDecimal money).
+Метод withdraw(String money) класса BankAccount должен делегировать поведение в метод withdraw(BigDecimal money).
+В методе withdraw(BigDecimal money), если необходимо, используй synchronized.
+В методе deposit(BigDecimal money), если необходимо, используй synchronized.
