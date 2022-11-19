@@ -1,0 +1,12 @@
+Установить модификатор synchronized только тем методам, которым необходимо.
+Объект класса Solution будет использоваться нитями.
+
+Требования:
+В method0, если необходимо, используй synchronized.
+В method1, если необходимо, используй synchronized.
+В method2, если необходимо, используй synchronized.
+В method3, если необходимо, используй synchronized.
+В method4, если необходимо, используй synchronized.
+В method5, если необходимо, используй synchronized.
+В method6, если необходимо, используй synchronized.
+В method7, если необходимо, используй synchronized.
