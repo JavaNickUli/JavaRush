@@ -1,0 +1,12 @@
+Разберись, что делает программа.
+Аналогично классу DecoratorRunnableImpl создай класс DecoratorMyRunnableImpl.
+Вывод в консоль должен быть таким:
+DecoratorRunnableImpl body
+DecoratorMyRunnableImpl body
+RunnableImpl body
+
+Требования:
+Создай класс DecoratorMyRunnableImpl, аналогичный DecoratorRunnableImpl.
+После запуска, каждый класс должен вывести в консоль "<свое имя класса> body", например "DecoratorRunnableImpl body".
+Классы RunnableImpl и DecoratorRunnableImpl изменять нельзя.
+Метод main изменять нельзя.
