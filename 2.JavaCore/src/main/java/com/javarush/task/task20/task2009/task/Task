@@ -1,0 +1,7 @@
+Сделай так, чтобы сериализация класса ClassWithStatic была возможной.
+
+Требования:
+Класс ClassWithStatic должен существовать внутри класса Solution.
+Класс ClassWithStatic должен быть статическим.
+Класс ClassWithStatic должен быть публичным.
+Класс ClassWithStatic должен поддерживать интерфейс Serializable.
