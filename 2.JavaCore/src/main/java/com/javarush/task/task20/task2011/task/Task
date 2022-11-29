@@ -1,0 +1,12 @@
+Реализуй интерфейс Externalizable в классе Apartment.
+
+Требования:
+Класс Solution.Apartment должен поддерживать интерфейс Externalizable.
+В классе Solution.Apartment должен быть реализован метод writeExternal с одним параметром типа ObjectOutput.
+В классе Solution.Apartment должен быть реализован метод readExternal с одним параметром типа ObjectInput.
+В методе writeExternal, на полученном в качестве параметра объекте типа ObjectOutput должен быть вызван метод
+writeObject с параметром address.
+В методе writeExternal, на полученном в качестве параметра объекте типа ObjectOutput должен быть вызван метод
+writeInt с параметром year.
+Метод readExternal должен корректно восстанавливать из ObjectInput значение поля address.
+Метод readExternal должен корректно восстанавливать из ObjectInput значение поля year.
