@@ -1,0 +1,9 @@
+Запрети сериализацию класса SubSolution используя NotSerializableException.
+Сигнатуры классов менять нельзя.
+
+Требования:
+Класс Solution должен поддерживать интерфейс Serializable.
+Класс SubSolution должен быть создан внутри класса Solution.
+Класс SubSolution должен быть потомком класса Solution.
+При попытке сериализовать объект типа SubSolution должно возникать исключение NotSerializableException.
+При попытке десериализовать объект типа SubSolution должно возникать исключение NotSerializableException.
