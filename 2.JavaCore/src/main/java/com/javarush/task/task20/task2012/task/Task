@@ -1,0 +1,8 @@
+Класс OutputToConsole должен сериализовываться с помощью интерфейса Externalizable.
+Найди и исправь ошибку.
+
+Требования:
+Класс Solution.OutputToConsole должен поддерживать интерфейс Externalizable.
+Класс OutputToConsole должен быть создан в классе Solution.
+Класс OutputToConsole должен быть публичным.
+Класс OutputToConsole должен быть статическим.
