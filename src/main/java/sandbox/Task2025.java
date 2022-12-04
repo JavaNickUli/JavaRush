@@ -1,52 +1,38 @@
 package sandbox;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class Task2025 {
 
     public static long[] getNumbers(long N) {
-
-        List<Long> list = new ArrayList<>();
-        for (long i = 1; i < N; i++) {
-            String number = String.valueOf(i);
-            long sum = 0;
-            for (int digit : number.toCharArray()) {
-                if (digit == 0) continue;
-                sum += digit == 1 ? 1 : (long) Math.pow((digit - '0'), number.length());
+        int numberLength = String.valueOf(N).length();
+        long[][] powTable = new long[10][numberLength + 1];
+        for (int i = 0; i < powTable.length; i++) {
+            for (int j = 0; j < powTable[0].length; j++) {
+                powTable[i][j] = i;
+                for (int k = 1; k < j; k++) {
+                    powTable[i][j] *= i;
+                }
             }
-            if (sum == i) list.add(i);
         }
-        long[] result = new long[list.size()];
-        for (int i = 0; i < result.length; i++) {
-            result[i] = list.get(i);
+        Set<Long> numbersOfArmstrong = new TreeSet<>();
+        long sum = 0;
+        int[] numsArray = new int[numberLength];
+        numsArray[numsArray.length - 1] = 1;
+        while (sum < N) {
+            sum = 0;
+            for (int num : numsArray) {
+                sum += powTable[num][numberLength];
+            }
         }
-        return result;
-//        long[] result;
-//        List<Long> list = new ArrayList<>();
-//
-//        for (long i = 1; i < N; i++) {
-//            int countDigit = String.valueOf(i).length();
-//            long res = 0;
-//            for (int j = 0; j < countDigit; j++) {
-//                String num = String.valueOf(i);
-//                long tmp = Character.getNumericValue(num.charAt(j));
-//                if (tmp == 0) continue;
-//                long mult = 1;
-//                for (int k = 0; k < countDigit; k++) {
-//                    mult *= tmp;
-//                }
-//                res += mult;
-//            }
-//            if (i == res) list.add(i);
+//        int[] sumOfSign = new int[numsArray.length];
+//        int delta = numsArray.length - sumLine.length();
+//        for (int j = 0; j < sumLine.length(); j++) {
+//            sumOfSign[j + delta] = sumLine.charAt(j) - '0';
 //        }
-//
-//        result = new long[list.size()];
-//        for (int i = 0; i < list.size(); i++) {
-//            result[i] = list.get(i);
-//        }
-//        return result;
+        return null;
     }
 
     public static void main(String[] args) {
