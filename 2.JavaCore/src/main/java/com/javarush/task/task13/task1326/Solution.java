@@ -21,9 +21,9 @@ public class Solution {
                 list.add(num);
             }
         }
-        Collections.sort(list);
-        list.forEach(System.out::println);
         fileInputStream.close();
         bufferedReader.close();
+        Collections.sort(list);
+        list.forEach(System.out::println);
     }
 }
