@@ -23,7 +23,7 @@ public class Solution {
 
         public void run() {
             try {
-                while (!this.isInterrupted()) {
+                while (!isInterrupted()) {
                     Thread.sleep(1000);
                     seconds++;
                 }
