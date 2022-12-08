@@ -40,10 +40,6 @@ public class Hippodrome {
     }
 
     public void print() {
-        for (Horse horse : horses) {
-            horse.print();
-        }
-        System.out.println("\n\n\n\n\n\n\n\n\n\n");
     }
 
     public List<Horse> getHorses() {
