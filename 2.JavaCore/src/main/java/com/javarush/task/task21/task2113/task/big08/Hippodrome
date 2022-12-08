@@ -20,17 +20,6 @@ public class Hippodrome {
     }
 
     public void run() {
-        int i = 0;
-        try {
-            while (i++ < 100) {
-                move();
-                print();
-                Thread.sleep(200);
-                System.out.println(i);
-            }
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
     }
 
     public void move() {
