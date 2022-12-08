@@ -18,7 +18,6 @@ public class Hippodrome {
         game.getHorses().add(new Horse("An", 3, 0));
         game.getHorses().add(new Horse("El", 3, 0));
         game.run();
-        game.printWinner();
     }
 
     public void run() {
