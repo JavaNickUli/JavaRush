@@ -17,12 +17,6 @@ public class Horse {
     }
 
     public void print() {
-        int i = (int) distance;
-        StringBuilder wayOfHorse = new StringBuilder(name);
-        while (i-- > 0) {
-            wayOfHorse.insert(0, ".");
-        }
-        System.out.println(wayOfHorse);
     }
 
     public String getName() {

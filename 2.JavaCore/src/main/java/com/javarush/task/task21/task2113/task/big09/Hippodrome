@@ -26,7 +26,6 @@ public class Hippodrome {
                 move();
                 print();
                 Thread.sleep(200);
-                System.out.println(i);
             }
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
