@@ -46,22 +46,6 @@ public class Hippodrome {
         System.out.println("\n\n\n\n\n\n\n\n\n\n");
     }
 
-    public Horse getWinner() {
-        int winnerIndex = 0;
-        double max = 0;
-        for (int i = 0; i < horses.size(); i++) {
-            if (max < horses.get(i).getDistance()) {
-                max = horses.get(i).getDistance();
-                winnerIndex = i;
-            }
-        }
-        return horses.get(winnerIndex);
-    }
-
-    public void printWinner() {
-        System.out.println("Winner is " + getWinner().getName() + "!");
-    }
-
     public List<Horse> getHorses() {
         return horses;
     }
