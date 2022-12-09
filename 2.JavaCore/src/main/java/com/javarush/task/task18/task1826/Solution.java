@@ -7,12 +7,11 @@ import java.io.IOException;
 public class Solution {
 
     public static void main(String[] args) throws IOException {
-        FileInputStream fileInputStream = new FileInputStream(args[1]);
-        FileOutputStream fileOutputStream = new FileOutputStream(args[2]);
-        while (fileInputStream.available() > 0) {
-            fileOutputStream.write(~fileInputStream.read());
+        try (FileInputStream fileInputStream = new FileInputStream(args[1]);
+        FileOutputStream fileOutputStream = new FileOutputStream(args[2])) {
+            while (fileInputStream.available() > 0) {
+                fileOutputStream.write(~fileInputStream.read());
+            }
         }
-        fileInputStream.close();
-        fileOutputStream.close();
     }
 }
