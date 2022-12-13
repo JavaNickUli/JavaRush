@@ -1,20 +1,60 @@
 package sandbox;
 
-import java.util.Formatter;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Simple {
+    public static Map<Integer, String> map = new HashMap<Integer, String>();
 
-    public static void main(String[] args) {
-        Formatter f = new Formatter();
-        f.format("This is a %s %d book", "java", 8);
-        System.out.println(f);
-        System.out.println();
-        double x = 1000.0 / 3.0;
-        System.out.println("Строка без форматирования: " + x);
-        Formatter formatter = new Formatter();
-        formatter.format("Строка c форматированием: %.2f%n", x);
-        formatter.format("Строка c форматированием: %8.2f%n", x);
-        formatter.format("Строка c форматированием: %16.2f%n", x);
-        System.out.println(formatter);
+    static {
+        map.put(0, "ноль");
+        map.put(1, "один");
+        map.put(2, "два");
+        map.put(3, "три");
+        map.put(4, "четыре");
+        map.put(5, "пять");
+        map.put(6, "шесть");
+        map.put(7, "семь");
+        map.put(8, "восемь");
+        map.put(9, "девять");
+        map.put(10, "десять");
+        map.put(11, "одиннадцать");
+        map.put(12, "двенадцать");
+    }
+
+    public static void main(String[] args) throws IOException {
+        String fileName;
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));) {
+            fileName = reader.readLine();
+        }
+
+        try (BufferedReader reader = new BufferedReader(new FileReader(fileName));) {
+            while (reader.ready()) {
+                String[] line = reader.readLine().split("[\\s.]");
+
+                for (int i = 0; i < line.length; i++) {
+
+                    for (Integer key : map.keySet()) {
+
+                        try {
+                            if (Integer.parseInt(line[i]) == key) {
+                                line[i] = map.get(key);
+//                                System.out.println(line[i]);
+                            }
+                        } catch (NumberFormatException e) {
+                        }
+                    }
+                }
+                String newLine = "";
+                for (String item : line) {
+                    newLine = newLine + item + " ";
+                }
+                System.out.print(newLine.trim() + ". ");
+            }
+        }
     }
 }
