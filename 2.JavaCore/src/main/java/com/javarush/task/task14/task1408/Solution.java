@@ -7,17 +7,17 @@ public class Solution {
         hen.getCountOfEggsPerMonth();
     }
 
-    static class HenFactory {
+    static class HenFactory implements Country {
 
         static Hen getHen(String country) {
             switch (country) {
-                case "Ukraine":
+                case UKRAINE:
                     return new UkrainianHen();
-                case "Russia":
+                case RUSSIA:
                     return new RussianHen();
-                case "Moldova":
+                case MOLDOVA:
                     return new MoldovanHen();
-                case "Belarus":
+                case BELARUS:
                     return new BelarusianHen();
                 default:
                     return null;
