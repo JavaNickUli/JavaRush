@@ -10,7 +10,7 @@ public class Solution {
         String name = console.nextLine();
         int age = console.nextInt();
         console.close();
-        if (age > 17 && age < 29) {
+        if (age >= 18 && age <= 28) {
             System.out.println(name + militaryCommissar);
         }
     }
