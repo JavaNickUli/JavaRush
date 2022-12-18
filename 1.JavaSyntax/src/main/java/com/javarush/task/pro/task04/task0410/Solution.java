@@ -9,13 +9,13 @@ public class Solution {
         int min = Integer.MAX_VALUE;
         int secondMin = min;
         while (scanner.hasNextInt()) {
-            int temp = scanner.nextInt();
-            if (min > temp) {
+            int num = scanner.nextInt();
+            if (min > num) {
                 secondMin = min;
-                min = temp;
+                min = num;
             }
-            if (secondMin > temp && min != temp) {
-                secondMin = temp;
+            if (secondMin > num && min != num) {
+                secondMin = num;
             }
         }
         System.out.println(secondMin);

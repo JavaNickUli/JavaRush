@@ -1,4 +1,6 @@
 package com.javarush.games.minesweeper;
 
-public class MinesweeperGame {
+import com.javarush.engine.cell.Game;
+
+public class MinesweeperGame extends Game {
 }
