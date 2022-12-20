@@ -7,14 +7,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MinesweeperGame extends Game {
+
     private static final int SIDE = 9;
     private GameObject[][] gameField = new GameObject[SIDE][SIDE];
     private int countMinesOnField;
+    private static final String MINE = "\uD83D\uDCA3";
 
     @Override
     public void initialize() {
         setScreenSize(SIDE, SIDE);
         createGame();
+    }
+
+    @Override
+    public void onMouseLeftClick(int x, int y) {
+        openTile(x, y);
     }
 
     private void createGame() {
@@ -63,5 +70,16 @@ public class MinesweeperGame extends Game {
             }
         }
         return result;
+    }
+
+    private void openTile(int x, int y) {
+        GameObject cell = gameField[y][x];
+        if (cell.isMine) {
+            setCellValue(x, y, MINE);
+        } else {
+            setCellNumber(x, y, cell.countMineNeighbors);
+        }
+        cell.isOpen = true;
+        setCellColor(x, y, Color.GREEN);
     }
 }

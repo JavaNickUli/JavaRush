@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MinesweeperGame extends Game {
-
     private static final int SIDE = 9;
     private GameObject[][] gameField = new GameObject[SIDE][SIDE];
     private int countMinesOnField;
@@ -27,6 +26,22 @@ public class MinesweeperGame extends Game {
                 }
                 gameField[y][x] = new GameObject(x, y, isMine);
                 setCellColor(x, y, Color.ORANGE);
+            }
+        }
+        countMineNeighbors();
+    }
+
+    private void countMineNeighbors() {
+        for (int i = 0; i < gameField.length; i++) {
+            for (int j = 0; j < gameField.length; j++) {
+                if (gameField[i][j].isMine) continue;
+                int countMines = 0;
+                for (GameObject cell : getNeighbors(gameField[i][j])) {
+                    if (cell.isMine) {
+                        countMines++;
+                    }
+                }
+                gameField[i][j].countMineNeighbors = countMines;
             }
         }
     }
