@@ -28,22 +28,6 @@ public class MinesweeperGame extends Game {
                 setCellColor(x, y, Color.ORANGE);
             }
         }
-        countMineNeighbors();
-    }
-
-    private void countMineNeighbors() {
-        for (int i = 0; i < gameField.length; i++) {
-            for (int j = 0; j < gameField.length; j++) {
-                if (gameField[i][j].isMine) continue;
-                int countMines = 0;
-                for (GameObject cell : getNeighbors(gameField[i][j])) {
-                    if (cell.isMine) {
-                        countMines++;
-                    }
-                }
-                gameField[i][j].countMineNeighbors = countMines;
-            }
-        }
     }
 
     private List<GameObject> getNeighbors(GameObject gameObject) {
