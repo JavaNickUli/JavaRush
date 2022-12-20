@@ -1,20 +1,19 @@
 package com.javarush.task.task16.task1632;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Solution {
 
     public static List<Thread> threads = new ArrayList<>(5);
 
     static {
-        threads.add(new TreadOne());
-        threads.add(new TreadTwo());
-        threads.add(new TreadThree());
-        threads.add(new TreadFour());
-        threads.add(new TreadFive());
+        threads.add(new ThreadOne());
+        threads.add(new ThreadTwo());
+        threads.add(new ThreadThree());
+        threads.add(new ThreadFour());
+        threads.add(new ThreadFive());
     }
 
     public static void main(String[] args) {
@@ -23,7 +22,7 @@ public class Solution {
         }
     }
 
-    public static class TreadOne extends Thread {
+    public static class ThreadOne extends Thread {
 
         @Override
         public void run() {
@@ -37,7 +36,7 @@ public class Solution {
         }
     }
 
-    public static class TreadTwo extends Thread {
+    public static class ThreadTwo extends Thread {
 
         @Override
         public void run() {
@@ -49,7 +48,7 @@ public class Solution {
         }
     }
 
-    public static class TreadThree extends Thread {
+    public static class ThreadThree extends Thread {
 
         @Override
         public void run() {
@@ -63,7 +62,7 @@ public class Solution {
         }
     }
 
-    public static class TreadFour extends Thread implements Message {
+    public static class ThreadFour extends Thread implements Message {
 
         @Override
         public void run() {
@@ -77,24 +76,20 @@ public class Solution {
         }
     }
 
-    public static class TreadFive extends Thread {
+    public static class ThreadFive extends Thread {
 
         @Override
         public void run() {
+            Scanner scanner = new Scanner(System.in);
             int sum = 0;
             try {
-                BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
                 while (!isInterrupted()) {
-                    String line = reader.readLine();
-                    if ("N".equals(line)) {
-                        break;
-                    }
+                    String line = scanner.nextLine();
+                    if ("N".equals(line)) break;
                     sum += Integer.parseInt(line);
                 }
-            } catch (Exception e) {
-                throw new RuntimeException(e);
-            }
-            System.out.println(sum);
+                System.out.println(sum);
+            } catch (Exception ignored) {}
         }
     }
 }
