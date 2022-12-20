@@ -3,7 +3,6 @@ module uli.nick.games {
     requires javafx.fxml;
     requires desktop.game.engine;
 
-
-    opens uli.nick.games to javafx.fxml;
-    exports uli.nick.games;
+    exports com.javarush.games.minesweeper;
+    opens com.javarush.games.minesweeper to javafx.graphics;
 }
