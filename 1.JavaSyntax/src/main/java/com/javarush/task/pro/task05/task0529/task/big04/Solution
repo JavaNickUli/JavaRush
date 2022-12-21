@@ -23,9 +23,6 @@ public class Solution {
                 } else j--;
             }
             for (int j = 0; j < field[i].length; j++) {
-                if (field[i][j].equals(robotank) && bombs[i][j] == 1) {
-                    field[i][j] = hit;
-                }
                 System.out.print(field[i][j]);
             }
             System.out.println();

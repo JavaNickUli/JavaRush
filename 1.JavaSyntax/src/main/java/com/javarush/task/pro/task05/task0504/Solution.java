@@ -10,8 +10,6 @@ public class Solution {
         resultArray = new int[firstArray.length + secondArray.length];
         for (int i = 0; i < resultArray.length; i++) {
             resultArray[i] = i < firstArray.length ? firstArray[i] : secondArray[i - firstArray.length];
-        }
-        for (int i = 0; i < resultArray.length; i++) {
             System.out.print(resultArray[i] + ", ");
         }
     }
