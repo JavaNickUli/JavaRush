@@ -18,7 +18,6 @@ public class Solution {
     public static void main(String[] args) {
         diabloPosition = getRandomNumber(4);
         findDiablo();
-        battle();
     }
 
     public static int getRandomNumber(int range) {
@@ -32,18 +31,6 @@ public class Solution {
             System.out.println(getPositionPhrase);
         }
         System.out.println(findDiabloPhrase);
-    }
-
-    public static void battle() {
-        while (amigoLives > 0 && diabloLives > 0) {
-            if (amigoAttacks() == diabloDefends()) {
-                amigoLostLife();
-                System.out.println(diabloDefendPhrase);
-            } else {
-                diabloLostLife();
-                System.out.println(amigoAttackPhrase);
-            }
-        }
     }
 
     public static void amigoLostLife() {
