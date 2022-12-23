@@ -1,0 +1,12 @@
+package com.javarush.task.pro.task07.task0716;
+
+public class Solution {
+
+    public static char[] chars = {1076, 1086, 1088, 1084, 1080, 1053};
+
+    public static void main(String[] args) {
+        for (int i = chars.length - 1; i >= 0; i--) {
+            System.out.print(chars[i]);
+        }
+    }
+}
