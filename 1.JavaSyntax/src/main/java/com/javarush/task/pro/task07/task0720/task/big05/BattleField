@@ -15,11 +15,7 @@ public class BattleField {
         do {
             System.out.println(galavirAttack);
             nimrod.defend(galavirXIII.attack());
-            if (isNimrodAlive(nimrod)) {
-                System.out.println(nimrodAttack);
-                galavirXIII.defend(nimrod.attack());
-            } else break;
-        } while (isGalavirAlive(galavirXIII));
+        } while (isNimrodAlive(nimrod));
     }
 
     public static boolean isNimrodAlive(Nimrod nimrod) {
