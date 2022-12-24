@@ -9,8 +9,8 @@ public class Solution {
         try (BufferedReader pathReader = new BufferedReader(new InputStreamReader(System.in));
              FileInputStream firstInputStream = new FileInputStream(firstPath = pathReader.readLine());
              FileInputStream secondInputStream = new FileInputStream(pathReader.readLine());
-             ByteArrayOutputStream out = new ByteArrayOutputStream();
-             FileOutputStream fileOutputStream = new FileOutputStream(firstPath)) {
+             FileOutputStream fileOutputStream = new FileOutputStream(firstPath);
+             ByteArrayOutputStream out = new ByteArrayOutputStream()) {
             while (secondInputStream.available() > 0) {
                 out.write(secondInputStream.read());
             }
