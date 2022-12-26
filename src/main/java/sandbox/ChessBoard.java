@@ -1,6 +1,7 @@
 package sandbox;
 
 public class ChessBoard {
+
     public static void main(String[] args) {
         String[] color = {"\033[30;47m", "\033[37;40m"};
         for (int i = 8; i > 0; i--) {
