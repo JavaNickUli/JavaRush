@@ -7,9 +7,7 @@ import java.io.InputStreamReader;
 public class Solution {
 
     public static void main(String[] args) throws IOException {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String url = reader.readLine();
-        reader.close();
+        String url = new BufferedReader(new InputStreamReader(System.in)).readLine();
         String param = url.substring(url.indexOf("?") + 1);
         for (String el : param.split("&")) {
             System.out.print((el.contains("=") ? el.substring(0, el.indexOf("=")) : el) + " ");
