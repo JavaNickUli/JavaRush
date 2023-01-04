@@ -1,0 +1,5 @@
+Используя StringBuilder в методе reverseString(String), разверни строку, полученную как параметр.
+
+Требования:
+Нужно, чтобы метод reverseString(String) использовал StringBuilder.
+Нужно, чтобы метод reverseString(String) возвращал развернутую строку.
