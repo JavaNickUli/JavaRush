@@ -9,16 +9,15 @@ import java.util.TreeSet;
 public class Solution {
 
     public static void main(String[] args) throws Exception {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        FileInputStream inputStream = new FileInputStream(reader.readLine());
-        reader.close();
         Set<Integer> set = new TreeSet<>();
-        while (inputStream.available() > 0) {
-            set.add(inputStream.read());
-        }
-        inputStream.close();
-        for (int aByte : set) {
-            System.out.print(aByte + " ");
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+             FileInputStream inputStream = new FileInputStream(reader.readLine())) {
+            while (inputStream.available() > 0) {
+                set.add(inputStream.read());
+            }
+            for (int aByte : set) {
+                System.out.print(aByte + " ");
+            }
         }
     }
 }
