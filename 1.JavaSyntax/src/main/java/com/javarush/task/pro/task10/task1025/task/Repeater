@@ -1,0 +1,13 @@
+package com.javarush.task.pro.task10.task1025;
+
+public class Repeater {
+    private String trajectory = "parabolic";
+    private int frequency = 30;
+
+    //напишите тут ваш код
+
+    @Override
+    public String toString() {
+        return String.format("Repeater trajectory is %s, with a %dGHz communication frequency.", trajectory, frequency);
+    }
+}
