@@ -1,0 +1,9 @@
+Давай проведем рефакторинг кода: вынесем отдельно утильные методы.
+Для этого создай внутренний статический (вложенный) класс Calculator и перенеси в него методы add, subtract, multiply и
+divide.
+Не забудь подкорректировать их вызовы.
+
+Требования:
+В классе Solution нужно создать вложенный (static nested) класс Calculator.
+Методы add, subtract, multiply и divide нужно перенести в класс Calculator.
+В методе main должны быть вызваны методы add, subtract, multiply и divide класса Calculator.
