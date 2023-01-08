@@ -1,0 +1,13 @@
+package com.javarush.task.pro.task11.task1126;
+
+/*
+Студент
+*/
+
+public class Student {
+    private String name;
+
+    public void Student(String name) {
+        name = name;
+    }
+}
