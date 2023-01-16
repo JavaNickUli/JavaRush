@@ -1,0 +1,4 @@
+В методе main найди и удали язык программирования Pascal из списка programmingLanguages.
+
+Требования:
+В методе main должен удаляться Pascal из списка programmingLanguages.
