@@ -11,7 +11,7 @@ public class Solution {
         String verb = "сохраняет";
 
         System.out.println("Новости:");
-        System.out.println(name + " " + date + " " + time + " изобрел " + adjective + " " + noun + " который " + verb +
-                " террабайты данных в минуту.");
+        System.out.println(name + " " + date + " " + time + " изобрел " + adjective +
+                " " + noun + " который " + verb + " террабайты данных в минуту.");
     }
 }
