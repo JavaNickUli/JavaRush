@@ -11,14 +11,10 @@ public class Solution {
         scanner.close();
         int quarter = 2;
         if (y > 0) {
-            if (x > 0) {
-                quarter--;
-            }
+            if (x > 0) quarter--;
         } else {
             quarter++;
-            if (x > 0) {
-                quarter++;
-            }
+            if (x > 0) quarter++;
         }
         System.out.println(quarter);
     }
