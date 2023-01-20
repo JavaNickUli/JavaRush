@@ -17,5 +17,6 @@ public class Solution {
             if (x > 0) quarter++;
         }
         System.out.println(quarter);
+//        System.out.println(y > 0 ? x > 0 ? 1 : 2 : x < 0 ? 3 : 4);
     }
 }
