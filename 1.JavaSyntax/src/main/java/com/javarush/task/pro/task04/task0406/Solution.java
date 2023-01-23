@@ -8,11 +8,8 @@ public class Solution {
         Scanner scanner = new Scanner(System.in);
         while (true) {
             String word = scanner.nextLine();
-            if (!"enough".equals(word)) {
-                System.out.println(word);
-            } else {
-                break;
-            }
+            if ("enough".equals(word)) break;
+            System.out.println(word);
         }
     }
 }
