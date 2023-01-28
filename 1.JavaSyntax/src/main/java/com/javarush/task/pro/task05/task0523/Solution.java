@@ -7,11 +7,12 @@ public class Solution {
     public static void main(String[] args) {
         int x = 0;
         int y = 0;
-        for (int i = 0; i < coordinates.length; i++){
+        for (int i = 0; i < coordinates.length; i++) {
             if ((coordinates[i] % 2) == 0)
                 y += coordinates[i];
-            else if ((coordinates[i] % 2) == 1)
-            x += coordinates[i];}
+            else
+                x += coordinates[i];
+        }
         System.out.print("(" + x + ";" + y + ")");
     }
 }
